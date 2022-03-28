@@ -8,11 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="provider" />
         <module name="consumer" />
+        <module name="boot-consumer" />
+        <module name="boot-provider" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot-consumer" options="-parameters" />
+      <module name="boot-provider" options="-parameters" />
       <module name="consumer" options="-parameters" />
       <module name="provider" options="-parameters" />
     </option>

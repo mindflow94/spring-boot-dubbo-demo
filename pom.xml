@@ -17,29 +17,47 @@
     <modules>
         <module>provider</module>
         <module>consumer</module>
+        <module>boot-provider</module>
+        <module>boot-consumer</module>
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <spring.cloud.alibaba.version>2.2.6.RELEASE</spring.cloud.alibaba.version>
+        <dubbo.version>2.7.8</dubbo.version>
+        <nacos.client.version>1.3.2</nacos.client.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-                <version>${spring.cloud.alibaba.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-starter-dubbo</artifactId>
-                <version>${spring.cloud.alibaba.version}</version>
-            </dependency>
+            <!-- 依赖管理会导致nacos和alibaba ncaos冲突 -->
+            <!-- spring cloud dubbo -->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+<!--                <version>${spring.cloud.alibaba.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-starter-dubbo</artifactId>-->
+<!--                <version>${spring.cloud.alibaba.version}</version>-->
+<!--            </dependency>-->
+            <!-- spring boot dubbo -->
+<!--            <dependency>-->
+<!--                <groupId>org.apache.dubbo</groupId>-->
+<!--                <artifactId>dubbo-spring-boot-starter</artifactId>-->
+<!--                <version>${dubbo.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.nacos</groupId>-->
+<!--                <artifactId>nacos-client</artifactId>-->
+<!--                <version>${nacos.client.version}</version>-->
+<!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
+    <!--私服部署配置，声明地址，不需要可以去掉-->
     <distributionManagement>
         <repository>
             <id>nexus</id>

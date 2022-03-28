@@ -7,5 +7,4 @@ package com.troila.provider;
  */
 public interface LoginService {
     String test();
-    String testov();
 }

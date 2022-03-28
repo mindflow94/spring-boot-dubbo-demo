@@ -1,8 +1,6 @@
 package com.troila.provider;
 
-import com.troila.provider.test.LoginServiceTest;
 import org.apache.dubbo.config.annotation.DubboService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,16 +11,10 @@ import org.springframework.stereotype.Component;
 @Component
 @DubboService
 public class LoginServiceImpl implements LoginService {
-    @Autowired
-    LoginServiceTest loginServiceTest;
 
     @Override
     public String test() {
         return "test***test";
     }
 
-    @Override
-    public String testov() {
-        return loginServiceTest.test();
-    }
 }

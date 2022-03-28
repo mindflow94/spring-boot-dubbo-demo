@@ -1,3 +1,5 @@
 com\troila\provider\LoginService.class
 com\troila\provider\Application.class
 com\troila\provider\LoginServiceImpl.class
+com\troila\provider\test\LoginServiceTest.class
+com\troila\provider\test\LoginServiceTestImpl.class
